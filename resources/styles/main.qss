@@ -1,0 +1,92 @@
+/* 全局字体与背景 */
+QWidget {
+    font-family: "Segoe UI", "Microsoft YaHei", sans-serif;
+    font-size: 14px;
+    color: #333333;
+    background-color: #F5F5F7;
+}
+
+/* 侧边导航栏 */
+QListWidget#NavBar {
+    background-color: #FFFFFF;
+    border: none;
+    border-right: 1px solid #E0E0E0;
+    outline: none;
+    padding-top: 10px;
+}
+
+QListWidget#NavBar::item {
+    height: 50px;
+    padding-left: 10px;
+    border-left: 4px solid transparent;
+    color: #555555;
+}
+
+QListWidget#NavBar::item:hover {
+    background-color: #FAFAFA;
+}
+
+QListWidget#NavBar::item:selected {
+    color: #007ACC; /* 科技蓝 */
+    background-color: #E6F7FF;
+    border-left: 4px solid #007ACC;
+    font-weight: bold;
+}
+
+/* 顶部工具栏按钮 */
+QPushButton.ToolBtn {
+    background-color: #FFFFFF;
+    border: 1px solid #D9D9D9;
+    border-radius: 4px;
+    padding: 6px 15px;
+    min-width: 80px;
+}
+
+QPushButton.ToolBtn:hover {
+    border-color: #40A9FF;
+    color: #40A9FF;
+}
+
+QPushButton.ToolBtn:pressed {
+    background-color: #096DD9;
+    color: #FFFFFF;
+    border-color: #096DD9;
+}
+
+/* 表格样式 */
+QTableView {
+    background-color: #FFFFFF;
+    border: 1px solid #E0E0E0;
+    selection-background-color: #E6F7FF;
+    selection-color: #333333;
+    gridline-color: #F0F0F0;
+}
+
+/* 修改 DevicePage 表格在高分屏下的表现 */
+QHeaderView::section {
+    min-height: 45px; /* Qt6 RHI 渲染下，建议给足高度 */
+    background-color: #FAFAFA;
+    border-bottom: 1px solid #E0E0E0;
+    padding: 4px;
+}
+
+/* 针对 SMU 状态的自定义属性选择器 */
+QLabel[status="error"] {
+    color: #FF4D4F;
+    font-weight: bold;
+}
+
+/* 标题样式 */
+QLabel.PageTitle {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2C3E50;
+    margin-bottom: 10px;
+}
+
+/* 状态栏 */
+QStatusBar {
+    background-color: #FFFFFF;
+    border-top: 1px solid #E0E0E0;
+    color: #666666;
+}
